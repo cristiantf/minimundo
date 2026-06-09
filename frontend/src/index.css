@@ -1,0 +1,536 @@
+/* ==========================================
+   MiniMundo — Sistema de Diseño Global
+   App Educativa para Niños de 3 a 5 Años
+   ========================================== */
+
+/* Google Fonts — Baloo 2 (infantil y amigable) */
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&display=swap');
+
+/* ==========================================
+   Variables CSS — Paleta de Colores
+   ========================================== */
+:root {
+  /* Colores principales */
+  --color-primary: #4ECDC4;         /* Verde azulado - Mascota principal */
+  --color-primary-dark: #3BAEA7;
+  --color-primary-light: #7EDED8;
+
+  --color-secondary: #9B72CF;       /* Morado suave - Mascota secundaria */
+  --color-secondary-dark: #7B52AF;
+  --color-secondary-light: #B892DF;
+
+  --color-accent: #FF9F43;          /* Naranja cálido - Botones/CTAs */
+  --color-accent-dark: #E8872F;
+  --color-accent-light: #FFB86C;
+
+  /* Colores de retroalimentación */
+  --color-success: #2ECC71;         /* Verde - éxito/correcto */
+  --color-warning: #FECA57;         /* Amarillo - estrellas/recompensas */
+  --color-error: #FF6B6B;           /* Rojo suave - error */
+  --color-info: #74B9FF;            /* Azul cielo - información */
+
+  /* Colores de UI */
+  --color-pink: #FD79A8;            /* Rosa suave - acentos */
+  --color-wood: #8B6914;            /* Marrón - marcos de madera */
+  --color-wood-light: #A88032;
+  --color-wood-dark: #6B4F0E;
+
+  /* Fondos */
+  --bg-sky-light: #E8F8F5;
+  --bg-sky: #74B9FF;
+  --bg-nature: #A8E6CF;
+  --bg-night: #2C3E50;
+
+  /* Texto */
+  --text-primary: #2D3436;
+  --text-secondary: #636E72;
+  --text-white: #FFFFFF;
+  --text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+
+  /* Tipografía */
+  --font-family: 'Baloo 2', cursive, sans-serif;
+  --font-title: 800;
+  --font-subtitle: 700;
+  --font-body: 600;
+  --font-label: 500;
+  --font-small: 400;
+
+  /* Tamaños de texto */
+  --text-xxl: clamp(28px, 5vw, 36px);
+  --text-xl: clamp(22px, 4vw, 28px);
+  --text-lg: clamp(18px, 3.5vw, 24px);
+  --text-md: clamp(16px, 3vw, 20px);
+  --text-sm: clamp(14px, 2.5vw, 16px);
+  --text-xs: clamp(12px, 2vw, 14px);
+
+  /* Espaciado */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  --space-xxl: 48px;
+
+  /* Bordes */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 20px;
+  --radius-round: 50%;
+
+  /* Sombras */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.15);
+  --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.2);
+  --shadow-glow-primary: 0 0 20px rgba(78, 205, 196, 0.5);
+  --shadow-glow-accent: 0 0 20px rgba(255, 159, 67, 0.5);
+  --shadow-glow-success: 0 0 20px rgba(46, 204, 113, 0.5);
+
+  /* Tamaños de botones para niños (mínimo 48px, recomendado 64px) */
+  --btn-min-size: 48px;
+  --btn-recommended-size: 64px;
+  --btn-large-size: 80px;
+
+  /* Animaciones */
+  --transition-fast: 200ms ease;
+  --transition-normal: 300ms ease;
+  --transition-slow: 500ms ease;
+  --bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+/* ==========================================
+   Reset y Base
+   ========================================== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-family);
+  font-weight: var(--font-body);
+  color: var(--text-primary);
+  background: var(--bg-sky-light);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+button {
+  font-family: var(--font-family);
+  cursor: pointer;
+  border: none;
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* ==========================================
+   Utilidades
+   ========================================== */
+.text-center { text-align: center; }
+.text-white { color: var(--text-white); }
+.text-shadow { text-shadow: var(--text-shadow); }
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.gap-sm { gap: var(--space-sm); }
+.gap-md { gap: var(--space-md); }
+.gap-lg { gap: var(--space-lg); }
+
+/* ==========================================
+   Marco de Madera Decorativo
+   ========================================== */
+.wood-frame {
+  border: 8px solid var(--color-wood);
+  border-radius: var(--radius-xl);
+  box-shadow:
+    inset 0 0 0 3px var(--color-wood-light),
+    0 4px 16px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(
+    135deg,
+    var(--color-wood-light) 0%,
+    var(--color-wood) 50%,
+    var(--color-wood-dark) 100%
+  );
+  padding: 6px;
+}
+
+.wood-frame-content {
+  background: white;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  height: 100%;
+}
+
+/* ==========================================
+   Botones para Niños
+   ========================================== */
+.btn-kid {
+  min-width: var(--btn-recommended-size);
+  min-height: var(--btn-recommended-size);
+  padding: var(--space-md) var(--space-lg);
+  border-radius: var(--radius-lg);
+  font-family: var(--font-family);
+  font-weight: var(--font-subtitle);
+  font-size: var(--text-md);
+  color: var(--text-white);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  transition: transform var(--transition-fast) var(--bounce),
+              box-shadow var(--transition-fast);
+  touch-action: manipulation;
+}
+
+.btn-kid:active {
+  transform: scale(0.92);
+}
+
+.btn-kid:hover {
+  transform: scale(1.05);
+  box-shadow: var(--shadow-lg);
+}
+
+.btn-kid--primary {
+  background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
+  box-shadow: 0 4px 0 var(--color-primary-dark), var(--shadow-md);
+}
+
+.btn-kid--accent {
+  background: linear-gradient(135deg, var(--color-accent), var(--color-accent-dark));
+  box-shadow: 0 4px 0 var(--color-accent-dark), var(--shadow-md);
+}
+
+.btn-kid--secondary {
+  background: linear-gradient(135deg, var(--color-secondary), var(--color-secondary-dark));
+  box-shadow: 0 4px 0 var(--color-secondary-dark), var(--shadow-md);
+}
+
+.btn-kid--success {
+  background: linear-gradient(135deg, var(--color-success), #27ae60);
+  box-shadow: 0 4px 0 #27ae60, var(--shadow-md);
+}
+
+/* ==========================================
+   Tarjetas de Juego
+   ========================================== */
+.game-card {
+  background: white;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  padding: var(--space-md);
+  text-align: center;
+  transition: transform var(--transition-fast) var(--bounce),
+              box-shadow var(--transition-fast);
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+.game-card:active {
+  transform: scale(0.95);
+}
+
+.game-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.game-card--letter {
+  border: 3px solid var(--color-accent);
+  min-width: 120px;
+}
+
+.game-card--letter .letter {
+  font-size: 48px;
+  font-weight: var(--font-title);
+  color: var(--color-accent);
+  line-height: 1;
+}
+
+.game-card--letter .word {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  margin-top: var(--space-xs);
+}
+
+/* ==========================================
+   Tarjetas de Categoría (Menú Principal)
+   ========================================== */
+.category-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-sm);
+  padding: var(--space-lg);
+  border-radius: var(--radius-xl);
+  background: linear-gradient(135deg, var(--color-accent), var(--color-accent-dark));
+  color: var(--text-white);
+  min-width: 100px;
+  min-height: 100px;
+  box-shadow: 0 4px 0 var(--color-accent-dark), var(--shadow-md);
+  transition: transform var(--transition-fast) var(--bounce);
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+.category-card:active {
+  transform: scale(0.92);
+  box-shadow: 0 2px 0 var(--color-accent-dark), var(--shadow-sm);
+}
+
+.category-card__icon {
+  font-size: 40px;
+}
+
+.category-card__label {
+  font-size: var(--text-sm);
+  font-weight: var(--font-subtitle);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* ==========================================
+   Cartas de Memoria (Flip)
+   ========================================== */
+.memory-card {
+  perspective: 600px;
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+.memory-card__inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.4s ease;
+  transform-style: preserve-3d;
+}
+
+.memory-card--flipped .memory-card__inner {
+  transform: rotateY(180deg);
+}
+
+.memory-card__front,
+.memory-card__back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: var(--radius-md);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.memory-card__front {
+  background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+  box-shadow: var(--shadow-md);
+}
+
+.memory-card__back {
+  background: white;
+  border: 3px solid var(--color-primary);
+  box-shadow: var(--shadow-md);
+  transform: rotateY(180deg);
+}
+
+.memory-card--matched {
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+.memory-card--matched .memory-card__back {
+  border-color: var(--color-success);
+  box-shadow: var(--shadow-glow-success);
+}
+
+/* ==========================================
+   Sistema de Estrellas / Recompensas
+   ========================================== */
+.star {
+  color: var(--color-warning);
+  font-size: 32px;
+  filter: drop-shadow(0 2px 4px rgba(254, 202, 87, 0.5));
+}
+
+.star--empty {
+  color: #ddd;
+  filter: none;
+}
+
+.star--animate {
+  animation: starPop 0.5s var(--bounce);
+}
+
+@keyframes starPop {
+  0% { transform: scale(0); opacity: 0; }
+  50% { transform: scale(1.3); }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+/* ==========================================
+   Mascota Widget
+   ========================================== */
+.mascot {
+  width: 120px;
+  height: 120px;
+  animation: mascotBounce 2s ease-in-out infinite;
+}
+
+@keyframes mascotBounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+.mascot__speech-bubble {
+  background: white;
+  border-radius: var(--radius-lg);
+  padding: var(--space-sm) var(--space-md);
+  box-shadow: var(--shadow-sm);
+  font-size: var(--text-sm);
+  font-weight: var(--font-subtitle);
+  color: var(--text-primary);
+  position: relative;
+  max-width: 200px;
+}
+
+.mascot__speech-bubble::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 20px;
+  width: 16px;
+  height: 16px;
+  background: white;
+  transform: rotate(45deg);
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* ==========================================
+   Pantallas de la App
+   ========================================== */
+.screen {
+  min-height: 100vh;
+  min-height: 100dvh;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.screen--home {
+  background: linear-gradient(180deg, #1a1a3e 0%, #2C3E50 40%, var(--color-primary-dark) 100%);
+}
+
+.screen--activity {
+  background: linear-gradient(180deg, var(--bg-sky) 0%, var(--bg-nature) 100%);
+}
+
+/* ==========================================
+   Animaciones de Feedback
+   ========================================== */
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  20% { transform: translateX(-6px); }
+  40% { transform: translateX(6px); }
+  60% { transform: translateX(-4px); }
+  80% { transform: translateX(4px); }
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.08); }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-shake { animation: shake 0.5s ease; }
+.animate-pulse { animation: pulse 1s ease infinite; }
+.animate-fadeInUp { animation: fadeInUp 0.5s ease forwards; }
+.animate-slideInLeft { animation: slideInLeft 0.4s ease forwards; }
+
+/* ==========================================
+   Feedback Visual de Acierto/Error
+   ========================================== */
+.feedback-success {
+  background: linear-gradient(135deg, rgba(46, 204, 113, 0.1), rgba(46, 204, 113, 0.2));
+  border: 2px solid var(--color-success);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
+  text-align: center;
+}
+
+.feedback-success__text {
+  font-size: var(--text-xl);
+  font-weight: var(--font-title);
+  color: var(--color-success);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* ==========================================
+   Responsive — Orientación Horizontal
+   ========================================== */
+@media (orientation: landscape) {
+  .screen {
+    min-height: 100vw;
+  }
+}
+
+/* Pantallas pequeñas */
+@media (max-width: 360px) {
+  :root {
+    --btn-recommended-size: 56px;
+  }
+
+  .category-card {
+    min-width: 80px;
+    min-height: 80px;
+    padding: var(--space-md);
+  }
+}

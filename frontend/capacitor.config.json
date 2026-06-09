@@ -1,0 +1,15 @@
+{
+  "appId": "com.minimundo.app",
+  "appName": "MiniMundo",
+  "webDir": "dist",
+  "server": {
+    "androidScheme": "https"
+  },
+  "plugins": {
+    "StatusBar": {
+      "style": "LIGHT",
+      "backgroundColor": "#4ECDC4"
+    },
+    "Haptics": {}
+  }
+}

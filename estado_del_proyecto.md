@@ -16,7 +16,7 @@
 | **Estado general** | 🟡 En Progreso |
 | **Fecha de inicio** | 28/05/2026 |
 | **Fecha estimada de lanzamiento** | Noviembre 2026 (Semana 22) |
-| **Progreso global** | ██░░░░░░░░ **10%** |
+| **Progreso global** | ██████░░░░ **35%** |
 
 ---
 
@@ -26,18 +26,22 @@
 
 | Sprint | Descripción | Estado | Progreso |
 |--------|-------------|--------|----------|
-| Sprint 0 | Configuración Inicial | 🟡 En Progreso | ██████░░░░ 50% |
+| Sprint 0 | Configuración Inicial | ✅ Completado | ██████████ 100% |
 | Sprint 1 | Diseño UI/UX | ⬜ Pendiente | ░░░░░░░░░░ 0% |
 
 **Detalle Sprint 0:**
 - [x] Definición de propuesta del proyecto
 - [x] Diseño conceptual de interfaces (mockups iniciales)
 - [x] Creación de documentación del proyecto
-- [ ] Configurar repositorio GitHub
-- [ ] Inicializar proyecto React.js con Vite + Capacitor
-- [ ] Configurar backend Node.js/Express + MySQL
-- [ ] Definir estructura de carpetas
-- [ ] Configurar entorno de desarrollo
+- [x] Configurar repositorio GitHub
+- [x] Inicializar proyecto React.js con Vite + Capacitor
+- [x] Configurar backend Node.js/Express + MySQL
+- [x] Definir estructura de carpetas
+- [x] Configurar entorno de desarrollo
+- [x] Definir paleta de colores, tipografía y guía de estilos
+- [x] Crear esquema de base de datos MySQL con datos iniciales
+- [x] Implementar API REST con controladores y rutas
+- [x] Crear pantalla Splash y página Home funcionales
 
 ### 🟢 Fase 2: Desarrollo Core (Semanas 5-10) — ⬜ No Iniciada
 
