@@ -32,4 +32,14 @@ api.interceptors.response.use(
   }
 );
 
+// Funciones de API específicas
+export const getModuleActivities = (moduleId) => {
+  return api.get(`/modules/${moduleId}/activities`);
+};
+
+export const updateProgress = (userId, moduleId, data) => {
+  // data={ completed_activities, stars_earned }
+  return api.put(`/progress/${userId}/${moduleId}`, data);
+};
+
 export default api;

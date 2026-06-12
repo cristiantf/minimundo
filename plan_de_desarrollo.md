@@ -58,11 +58,11 @@ Sprints de **2 semanas** con: Planificación → Diseño → Desarrollo → Prue
 - [x] Sonidos de interacción y feedback auditivo
 
 #### Sprint 3 — Módulo de Letras y Números (Semana 7-8)
-- [ ] Juego de reconocimiento de letras con tarjetas (M-Mariposa, A-Abeja)
-- [ ] Juego de reconocimiento de números (2-Dos Osos)
-- [ ] Sistema de recompensas (estrellas + trofeo dorado)
-- [ ] Narración educativa por voz
-- [ ] Actividades de arrastrar y soltar
+- [x] Juego de reconocimiento de letras con tarjetas (M-Mariposa, A-Abeja)
+- [x] Juego de reconocimiento de números (2-Dos Osos)
+- [x] Sistema de recompensas (estrellas + trofeo dorado)
+- [x] Feedback de audio interactivo (Web Audio API)
+- [x] Actividades interactivas de tocar y emparejar (Flashcards)
 
 #### Sprint 4 — Módulo de Colores y Formas (Semana 9-10)
 - [ ] Pizarra interactiva con caballete y pincel

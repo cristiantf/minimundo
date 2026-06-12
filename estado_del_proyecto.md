@@ -9,11 +9,11 @@
 
 | Indicador | Estado |
 |-----------|--------|
-| **Sprint actual** | Sprint 3 — Módulo Letras y Números |
+| **Sprint actual** | Sprint 4 — Módulo Colores y Formas |
 | **Estado general** | 🟡 En Progreso |
 | **Fecha de inicio** | 28/05/2026 |
 | **Fecha estimada de lanzamiento** | Noviembre 2026 (Semana 22) |
-| **Progreso global** | ████████░░ **60%** |
+| **Progreso global** | █████████░ **75%** |
 
 ---
 
@@ -50,10 +50,15 @@
 | Sprint | Descripción | Estado | Progreso |
 |--------|-------------|--------|----------|
 | Sprint 2 | Pantalla Principal y Navegación | ✅ Completado | ██████████ 100% |
-| Sprint 3 | Módulo Letras y Números | ⬜ Pendiente | ░░░░░░░░░░ 0% |
+| Sprint 3 | Módulo Letras y Números | ✅ Completado | ██████████ 100% |
 | Sprint 4 | Módulo Colores y Formas | ⬜ Pendiente | ░░░░░░░░░░ 0% |
 
-**Detalle Sprint 2:**
+**Detalle Sprint 3:**
+- [x] Motor de Flashcards interactivo para leer desde BD (`FlashcardGame.jsx`)
+- [x] Mecánica de Tocar y Emparejar con distractores aleatorios
+- [x] Modal de Recompensas con confeti animado (`RewardModal.jsx`)
+- [x] Sintetizador de audio con Web Audio API para feedback
+- [x] Conexión API real para Letras y Números y guardado de progreso
 - [x] Splash screen animado (`SplashScreen.jsx`)
 - [x] Pantalla de bienvenida con interfaz amigable (`HomePage.jsx`)
 - [x] Menú principal con 5 categorías
@@ -171,10 +176,10 @@ Se han diseñado **4 pantallas conceptuales** que demuestran la visión del proy
 
 | Métrica | Valor |
 |---------|-------|
-| Sprints completados | 3 / 10 |
-| Tareas completadas | 21 / ~80 |
-| Pantallas diseñadas | 4 / ~15 |
-| Módulos desarrollados | 0.5 / 6 |
+| Sprints completados | 4 / 10 |
+| Tareas completadas | 26 / ~80 |
+| Pantallas diseñadas | 5 / ~15 |
+| Módulos desarrollados | 2.5 / 6 |
 | Bugs reportados | 0 |
 | Bugs resueltos | 0 |
 | Cobertura de pruebas | 0% |
