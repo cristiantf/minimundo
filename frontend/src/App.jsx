@@ -3,6 +3,7 @@ import { AuthProvider } from './context/AuthContext';
 import { AudioProvider } from './context/AudioContext';
 import SplashScreen from './pages/SplashScreen';
 import HomePage from './pages/HomePage';
+import ModulePagePlaceholder from './pages/ModulePagePlaceholder';
 import './App.css';
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
           <Routes>
             <Route path="/" element={<SplashScreen />} />
             <Route path="/home" element={<HomePage />} />
+            <Route path="/modulo/:moduleId" element={<ModulePagePlaceholder />} />
           </Routes>
         </BrowserRouter>
       </AudioProvider>

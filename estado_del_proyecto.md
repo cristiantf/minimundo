@@ -12,22 +12,22 @@
 | **Proyecto** | MiniMundo - App Educativa Infantil |
 | **Responsable** | Romina Requene Velasco |
 | **Fase actual** | 🔵 Fase 1: Planificación y Diseño |
-| **Sprint actual** | Sprint 0 — Configuración Inicial |
+| **Sprint actual** | Sprint 2 — Pantalla Principal y Navegación |
 | **Estado general** | 🟡 En Progreso |
 | **Fecha de inicio** | 28/05/2026 |
 | **Fecha estimada de lanzamiento** | Noviembre 2026 (Semana 22) |
-| **Progreso global** | ██████░░░░ **35%** |
+| **Progreso global** | ███████░░░ **50%** |
 
 ---
 
 ## 2. Estado por Fases
 
-### 🔵 Fase 1: Planificación y Diseño (Semanas 1-4) — 🟡 En Progreso
+### 🔵 Fase 1: Planificación y Diseño (Semanas 1-4) — ✅ Completada
 
 | Sprint | Descripción | Estado | Progreso |
 |--------|-------------|--------|----------|
 | Sprint 0 | Configuración Inicial | ✅ Completado | ██████████ 100% |
-| Sprint 1 | Diseño UI/UX | ⬜ Pendiente | ░░░░░░░░░░ 0% |
+| Sprint 1 | Diseño UI/UX y Componentes | ✅ Completado | ██████████ 100% |
 
 **Detalle Sprint 0:**
 - [x] Definición de propuesta del proyecto
@@ -43,11 +43,16 @@
 - [x] Implementar API REST con controladores y rutas
 - [x] Crear pantalla Splash y página Home funcionales
 
-### 🟢 Fase 2: Desarrollo Core (Semanas 5-10) — ⬜ No Iniciada
+**Detalle Sprint 1:**
+- [x] Crear componentes base de diseño (KidButton, GameCard)
+- [x] Crear componentes de UI globales (MascotWidget, TopBar, WoodFrame)
+- [x] Validar diseño y estructura base con componentes reutilizables
+
+### 🟢 Fase 2: Desarrollo Core (Semanas 5-10) — 🟡 En Progreso
 
 | Sprint | Descripción | Estado | Progreso |
 |--------|-------------|--------|----------|
-| Sprint 2 | Pantalla Principal y Navegación | ⬜ Pendiente | ░░░░░░░░░░ 0% |
+| Sprint 2 | Pantalla Principal y Navegación | 🟡 En Progreso | ████████░░ 80% |
 | Sprint 3 | Módulo Letras y Números | ⬜ Pendiente | ░░░░░░░░░░ 0% |
 | Sprint 4 | Módulo Colores y Formas | ⬜ Pendiente | ░░░░░░░░░░ 0% |
 
@@ -79,8 +84,8 @@
 | # | Hito | Fecha Estimada | Estado |
 |---|------|---------------|--------|
 | 1 | Kickoff del proyecto | Semana 1 (28/05/2026) | ✅ Completado |
-| 2 | Diseño UI/UX aprobado | Semana 4 | ⬜ Pendiente |
-| 3 | MVP funcional (pantalla + 1 módulo) | Semana 8 | ⬜ Pendiente |
+| 2 | Diseño UI/UX aprobado | Semana 4 | ✅ Completado |
+| 3 | MVP funcional (pantalla + 1 módulo) | Semana 8 | 🟡 En Progreso |
 | 4 | Beta completa (todos los módulos) | Semana 14 | ⬜ Pendiente |
 | 5 | Release Candidate | Semana 18 | ⬜ Pendiente |
 | 6 | QA completado | Semana 20 | ⬜ Pendiente |
@@ -161,10 +166,10 @@ Se han diseñado **4 pantallas conceptuales** que demuestran la visión del proy
 
 | Métrica | Valor |
 |---------|-------|
-| Sprints completados | 0 / 10 |
-| Tareas completadas | 5 / ~80 |
+| Sprints completados | 2 / 10 |
+| Tareas completadas | 15 / ~80 |
 | Pantallas diseñadas | 4 / ~15 |
-| Módulos desarrollados | 0 / 6 |
+| Módulos desarrollados | 0.5 / 6 |
 | Bugs reportados | 0 |
 | Bugs resueltos | 0 |
 | Cobertura de pruebas | 0% |

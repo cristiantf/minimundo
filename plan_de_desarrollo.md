@@ -40,22 +40,22 @@ Sprints de **2 semanas** con: Planificación → Diseño → Desarrollo → Prue
 - [ ] Definir paleta de colores, tipografía y guía de estilos
 
 #### Sprint 1 — Diseño UI/UX (Semana 3-4)
-- [ ] Crear wireframes de baja fidelidad
-- [ ] Diseñar prototipos de alta fidelidad en Figma
-- [ ] Diseñar mascotas (personaje verde-azulado y morado)
-- [ ] Crear assets gráficos (animales, letras, números, formas)
-- [ ] Diseñar animaciones y transiciones
-- [ ] Validar diseño con usuarios objetivo
+- [x] Crear wireframes de baja fidelidad
+- [x] Diseñar prototipos de alta fidelidad en Figma
+- [x] Diseñar mascotas (personaje verde-azulado y morado)
+- [x] Crear assets gráficos (animales, letras, números, formas)
+- [x] Diseñar animaciones y transiciones
+- [x] Validar diseño con usuarios objetivo
 
 ### 🟢 Fase 2: Desarrollo Core (Semanas 5-10)
 
 #### Sprint 2 — Pantalla Principal y Navegación (Semana 5-6)
-- [ ] Splash screen animado
-- [ ] Pantalla de bienvenida "¡Bienvenidos a MiniMundo!"
-- [ ] Menú principal con categorías: Lectura, Matemáticas, Animales
-- [ ] Navegación segura (modo infantil)
-- [ ] Mascota interactiva con saludo personalizado ("¡Hola Romina!")
-- [ ] Sonidos de interacción y feedback auditivo
+- [x] Splash screen animado
+- [x] Pantalla de bienvenida "¡Bienvenidos a MiniMundo!"
+- [x] Menú principal con categorías: Lectura, Matemáticas, Animales
+- [x] Navegación segura (modo infantil)
+- [x] Mascota interactiva con saludo personalizado ("¡Hola Romina!")
+- [x] Sonidos de interacción y feedback auditivo
 
 #### Sprint 3 — Módulo de Letras y Números (Semana 7-8)
 - [ ] Juego de reconocimiento de letras con tarjetas (M-Mariposa, A-Abeja)
