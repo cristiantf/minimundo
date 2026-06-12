@@ -9,14 +9,11 @@
 
 | Indicador | Estado |
 |-----------|--------|
-| **Proyecto** | MiniMundo - App Educativa Infantil |
-| **Responsable** | Romina Requene Velasco |
-| **Fase actual** | 🔵 Fase 1: Planificación y Diseño |
-| **Sprint actual** | Sprint 2 — Pantalla Principal y Navegación |
+| **Sprint actual** | Sprint 3 — Módulo Letras y Números |
 | **Estado general** | 🟡 En Progreso |
 | **Fecha de inicio** | 28/05/2026 |
 | **Fecha estimada de lanzamiento** | Noviembre 2026 (Semana 22) |
-| **Progreso global** | ███████░░░ **50%** |
+| **Progreso global** | ████████░░ **60%** |
 
 ---
 
@@ -52,9 +49,17 @@
 
 | Sprint | Descripción | Estado | Progreso |
 |--------|-------------|--------|----------|
-| Sprint 2 | Pantalla Principal y Navegación | 🟡 En Progreso | ████████░░ 80% |
+| Sprint 2 | Pantalla Principal y Navegación | ✅ Completado | ██████████ 100% |
 | Sprint 3 | Módulo Letras y Números | ⬜ Pendiente | ░░░░░░░░░░ 0% |
 | Sprint 4 | Módulo Colores y Formas | ⬜ Pendiente | ░░░░░░░░░░ 0% |
+
+**Detalle Sprint 2:**
+- [x] Splash screen animado (`SplashScreen.jsx`)
+- [x] Pantalla de bienvenida con interfaz amigable (`HomePage.jsx`)
+- [x] Menú principal con 5 categorías
+- [x] Navegación segura (modo infantil con "Seguro Parental" en `TopBar`)
+- [x] Mascota interactiva con saludo personalizado (`MascotWidget.jsx`)
+- [x] Sonidos de interacción configurados en `KidButton` y `GameCard`
 
 ### 🟡 Fase 3: Módulos Complementarios (Semanas 11-14) — ⬜ No Iniciada
 
@@ -166,8 +171,8 @@ Se han diseñado **4 pantallas conceptuales** que demuestran la visión del proy
 
 | Métrica | Valor |
 |---------|-------|
-| Sprints completados | 2 / 10 |
-| Tareas completadas | 15 / ~80 |
+| Sprints completados | 3 / 10 |
+| Tareas completadas | 21 / ~80 |
 | Pantallas diseñadas | 4 / ~15 |
 | Módulos desarrollados | 0.5 / 6 |
 | Bugs reportados | 0 |
