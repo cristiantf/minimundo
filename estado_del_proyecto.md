@@ -9,11 +9,11 @@
 
 | Indicador | Estado |
 |-----------|--------|
-| **Sprint actual** | Sprint 5 — Memoria y Asociación |
+| **Sprint actual** | Sprint 6 — Animales y Sonidos |
 | **Estado general** | 🟡 En Progreso |
 | **Fecha de inicio** | 28/05/2026 |
 | **Fecha estimada de lanzamiento** | Noviembre 2026 (Semana 22) |
-| **Progreso global** | █████████░ **85%** |
+| **Progreso global** | ██████████ **90%** |
 
 ---
 
@@ -51,8 +51,15 @@
 |--------|-------------|--------|----------|
 | Sprint 2 | Pantalla Principal y Navegación | ✅ Completado | ██████████ 100% |
 | Sprint 3 | Módulo Letras y Números | ✅ Completado | ██████████ 100% |
-| Sprint 4 | Módulo Colores y Formas | ✅ Completado | ██████████ 100% |
-| Sprint 5 | Memoria y Asociación | ⬜ Pendiente | ░░░░░░░░░░ 0% |
+| Sprint 5 | Memoria y Asociación | ✅ Completado | ██████████ 100% |
+| Sprint 6 | Animales y Sonidos | ⬜ Pendiente | ░░░░░░░░░░ 0% |
+
+**Detalle Sprint 5:**
+- [x] Lógica de cartas interactiva (`MemoryGame.jsx` y `MemoryCard.jsx`)
+- [x] Animaciones 3D con `framer-motion` (giro de cartas)
+- [x] Dificultad progresiva (Fácil: 4, Medio: 6, Difícil: 8)
+- [x] Identificación por emojis en lugar de assets pesados
+- [x] Feedback de audio para coincidencias o fallos
 
 **Detalle Sprint 4:**
 - [x] Motor de clasificación por Formas y Colores (`ShapeSorter.jsx`)
@@ -184,10 +191,10 @@ Se han diseñado **4 pantallas conceptuales** que demuestran la visión del proy
 
 | Métrica | Valor |
 |---------|-------|
-| Sprints completados | 5 / 10 |
-| Tareas completadas | 31 / ~80 |
-| Pantallas diseñadas | 6 / ~15 |
-| Módulos desarrollados | 3.5 / 6 |
+| Sprints completados | 6 / 10 |
+| Tareas completadas | 36 / ~80 |
+| Pantallas diseñadas | 7 / ~15 |
+| Módulos desarrollados | 4.5 / 6 |
 | Bugs reportados | 0 |
 | Bugs resueltos | 0 |
 | Cobertura de pruebas | 0% |

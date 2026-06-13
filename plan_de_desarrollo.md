@@ -74,11 +74,11 @@ Sprints de **2 semanas** con: Planificación → Diseño → Desarrollo → Prue
 ### 🟡 Fase 3: Módulos Complementarios (Semanas 11-14)
 
 #### Sprint 5 — Memoria y Asociación (Semana 11-12)
-- [ ] Juego de memoria con cartas de animales (Gato, Panda)
-- [ ] Mecánica de voltear y emparejar
-- [ ] Niveles de dificultad progresiva (4, 6, 8 cartas)
-- [ ] Asociación de sonidos con imágenes
-- [ ] Retroalimentación positiva ("¡Excelente Trabajo!")
+- [x] Juego de memoria con cartas de animales (Gato, Panda)
+- [x] Mecánica de voltear y emparejar
+- [x] Niveles de dificultad progresiva (4, 6, 8 cartas)
+- [x] Asociación de sonidos con imágenes
+- [x] Retroalimentación positiva ("¡Excelente Trabajo!")
 
 #### Sprint 6 — Animales y Sonidos (Semana 13-14)
 - [ ] Galería interactiva de animales con sonidos
