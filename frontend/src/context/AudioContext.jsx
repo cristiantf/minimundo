@@ -75,12 +75,11 @@ export function AudioProvider({ children }) {
     }
   };
 
-  const playSound = useCallback((soundName) => {
-    playSynthesizedSound(soundName);
+  const playSound = useCallback((type = 'tap') => {
+    playSynthesizedSound(type);
   }, []);
 
   const playAudio = useCallback((url) => {
-    // Si hay URL, intentamos usar Audio normal de HTML5 como fallback
     try {
       const audio = new Audio(url);
       audio.play().catch(e => console.warn('No se pudo reproducir audio:', url));
@@ -93,8 +92,17 @@ export function AudioProvider({ children }) {
     // Web Audio sintetizado es efímero, no es necesario detener.
   }, []);
 
+  const synthesizeSpeech = useCallback((text) => {
+    if ('speechSynthesis' in window) {
+      const utterance = new SpeechSynthesisUtterance(text);
+      utterance.lang = 'es-ES';
+      utterance.rate = 0.9; // Un poco más lento para niños
+      window.speechSynthesis.speak(utterance);
+    }
+  }, []);
+
   return (
-    <AudioContext.Provider value={{ playSound, playAudio, stopAll }}>
+    <AudioContext.Provider value={{ playSound, playAudio, stopAll, synthesizeSpeech }}>
       {children}
     </AudioContext.Provider>
   );
@@ -102,8 +110,8 @@ export function AudioProvider({ children }) {
 
 export const useAudio = () => {
   const context = useContext(AudioContext);
-  if (!context) {
-    throw new Error('useAudio debe usarse dentro de AudioProvider');
+  if (context === undefined) {
+    throw new Error('useAudio must be used within an AudioProvider');
   }
   return context;
 };

@@ -185,6 +185,67 @@ const seedDatabase = async () => {
     ]);
 
     // ==========================================
+    // ACTIVIDADES — MÓDULO ANIMALES (NUEVO)
+    // ==========================================
+    await Activity.bulkCreate([
+      {
+        module_id: modules[2].id, // Animales
+        title: 'Nivel 1: Galería',
+        type: 'animal_gallery',
+        difficulty: 1,
+        content: {
+          animals: [
+            { id: 'vaca', emoji: '🐄', soundName: 'vaca' },
+            { id: 'cerdo', emoji: '🐷', soundName: 'cerdo' },
+            { id: 'pato', emoji: '🦆', soundName: 'pato' }
+          ]
+        }
+      },
+      {
+        module_id: modules[2].id,
+        title: 'Nivel 2: Alimentación',
+        type: 'animal_food',
+        difficulty: 1,
+        content: {
+          animal: { id: 'mono', emoji: '🐒' },
+          correctOption: { id: 'platano', emoji: '🍌' },
+          distractors: [{ id: 'hueso', emoji: '🦴' }, { id: 'pescado', emoji: '🐟' }]
+        }
+      },
+      {
+        module_id: modules[2].id,
+        title: 'Nivel 3: Hábitats',
+        type: 'animal_habitat',
+        difficulty: 2,
+        content: {
+          habitat: { name: 'Océano', emoji: '🌊' },
+          correctOption: { id: 'delfin', emoji: '🐬' },
+          distractors: [{ id: 'leon', emoji: '🦁' }, { id: 'aguila', emoji: '🦅' }]
+        }
+      },
+      {
+        module_id: modules[2].id,
+        title: 'Nivel 4: Sonidos',
+        type: 'animal_sound',
+        difficulty: 2,
+        content: {
+          soundTarget: { id: 'perro', emoji: '🐶', soundName: 'perro' },
+          distractors: [{ id: 'gato', emoji: '🐱' }, { id: 'caballo', emoji: '🐴' }]
+        }
+      },
+      {
+        module_id: modules[2].id,
+        title: 'Nivel 5: Sombras',
+        type: 'animal_shadow',
+        difficulty: 3,
+        content: {
+          shadowTarget: { id: 'elefante', emoji: '🐘' },
+          distractors: [{ id: 'jirafa', emoji: '🦒' }, { id: 'tigre', emoji: '🐅' }]
+        }
+      }
+    ]);
+
+    // ==========================================
     // ACTIVIDADES — MÓDULO COLORES Y FORMAS
     // ==========================================
     await Activity.bulkCreate([

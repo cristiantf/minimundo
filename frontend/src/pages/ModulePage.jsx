@@ -8,6 +8,7 @@ import FlashcardGame from '../components/game/FlashcardGame';
 import ShapeSorter from '../components/game/ShapeSorter';
 import CanvasBoard from '../components/game/CanvasBoard';
 import MemoryGame from '../components/game/MemoryGame';
+import AnimalGame from '../components/game/AnimalGame';
 import RewardModal from '../components/common/RewardModal';
 
 const MODULE_INFO = {
@@ -111,6 +112,10 @@ const ModulePage = () => {
     
     if (moduleId === 'memoria') {
       return <MemoryGame activities={activities} onComplete={handlePhaseComplete} />;
+    }
+
+    if (moduleId === 'animales') {
+      return <AnimalGame activities={activities} onComplete={handlePhaseComplete} />;
     }
     
     // Default
