@@ -185,6 +185,48 @@ const seedDatabase = async () => {
     ]);
 
     // ==========================================
+    // ACTIVIDADES — MÓDULO COLORES Y FORMAS
+    // ==========================================
+    await Activity.bulkCreate([
+      {
+        module_id: modules[3].id,
+        title: 'Color Rojo - Manzana',
+        type: 'color',
+        difficulty: 1,
+        content: { color: 'Rojo', hex: '#E74C3C', object: 'Manzana', emoji: '🍎' },
+        audio_url: '/sounds/colors/rojo.mp3',
+        image_url: '/images/colors/rojo_manzana.png'
+      },
+      {
+        module_id: modules[3].id,
+        title: 'Color Azul - Ballena',
+        type: 'color',
+        difficulty: 1,
+        content: { color: 'Azul', hex: '#3498DB', object: 'Ballena', emoji: '🐳' },
+        audio_url: '/sounds/colors/azul.mp3',
+        image_url: '/images/colors/azul_ballena.png'
+      },
+      {
+        module_id: modules[3].id,
+        title: 'Forma Círculo',
+        type: 'shape',
+        difficulty: 1,
+        content: { shape: 'Círculo', object: 'Pelota', emoji: '⚽' },
+        audio_url: '/sounds/shapes/circulo.mp3',
+        image_url: '/images/shapes/circulo_pelota.png'
+      },
+      {
+        module_id: modules[3].id,
+        title: 'Forma Cuadrado',
+        type: 'shape',
+        difficulty: 1,
+        content: { shape: 'Cuadrado', object: 'Regalo', emoji: '🎁' },
+        audio_url: '/sounds/shapes/cuadrado.mp3',
+        image_url: '/images/shapes/cuadrado_regalo.png'
+      }
+    ]);
+
+    // ==========================================
     // ACTIVIDADES — MÓDULO MEMORIA
     // ==========================================
     await Activity.bulkCreate([

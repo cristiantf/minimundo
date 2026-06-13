@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -6,9 +8,6 @@
    MiniMundo — Sistema de Diseño Global
    App Educativa para Niños de 3 a 5 Años
    ========================================== */
-
-/* Google Fonts — Baloo 2 (infantil y amigable) */
-@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&display=swap');
 
 /* ==========================================
    Variables CSS — Paleta de Colores

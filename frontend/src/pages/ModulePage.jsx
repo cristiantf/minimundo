@@ -5,6 +5,8 @@ import { useAuth } from '../context/AuthContext';
 import TopBar from '../components/common/TopBar';
 import MascotWidget from '../components/common/MascotWidget';
 import FlashcardGame from '../components/game/FlashcardGame';
+import ShapeSorter from '../components/game/ShapeSorter';
+import CanvasBoard from '../components/game/CanvasBoard';
 import RewardModal from '../components/common/RewardModal';
 
 const MODULE_INFO = {
@@ -18,13 +20,14 @@ const MODULE_INFO = {
 const ModulePage = () => {
   const { moduleId } = useParams();
   const navigate = useNavigate();
-  const { user, login } = useAuth(); // Usamos login para actualizar el estado del usuario localmente temporalmente
+  const { user, login } = useAuth();
 
   const [activities, setActivities] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [showReward, setShowReward] = useState(false);
-  const [starsEarned] = useState(5); // 5 estrellas por completar
+  const [starsEarned] = useState(5);
+  const [showCanvas, setShowCanvas] = useState(false);
 
   const currentModule = MODULE_INFO[moduleId];
 
@@ -37,18 +40,12 @@ const ModulePage = () => {
     const fetchActivities = async () => {
       try {
         setLoading(true);
-        // Llama a la API (Asumiendo que el ID del módulo en BD coincide con currentModule.id)
         const response = await getModuleActivities(currentModule.id);
-        
-        // Si la API devuelve los datos anidados (dependiendo del formato)
         const rawData = Array.isArray(response) ? response : response.data || [];
-        
-        // Asegurarnos de que "content" sea un objeto (algunas BD devuelven string JSON)
         const parsedData = rawData.map(act => ({
           ...act,
           content: typeof act.content === 'string' ? JSON.parse(act.content) : act.content
         }));
-
         setActivities(parsedData);
       } catch (err) {
         console.error('Error cargando actividades:', err);
@@ -61,25 +58,29 @@ const ModulePage = () => {
     fetchActivities();
   }, [currentModule]);
 
-  const handleGameComplete = async () => {
-    // Mostrar modal de recompensa
-    setShowReward(true);
+  const handlePhaseComplete = () => {
+    if (moduleId === 'colores' && !showCanvas) {
+      // Activar el canvas como premio tras completar el sorter
+      setShowCanvas(true);
+    } else {
+      // Fin de todas las fases
+      handleGameComplete();
+    }
+  };
 
-    // Actualizar progreso en backend si el usuario está logueado
+  const handleGameComplete = async () => {
+    setShowReward(true);
     if (user?.id) {
       try {
         await updateProgress(user.id, currentModule.id, {
           completed_activities: activities.length,
           stars_earned: starsEarned
         });
-        
-        // Actualizar el estado local (idealmente desde AuthContext)
         login({ ...user, total_stars: (user.total_stars || 0) + starsEarned });
       } catch (err) {
         console.error('Error guardando progreso:', err);
       }
     } else {
-      // Mock para testeo sin login
       login({ id: 999, name: 'Invitado', total_stars: (user?.total_stars || 0) + starsEarned });
     }
   };
@@ -98,9 +99,21 @@ const ModulePage = () => {
     );
   }
 
+  // Renderizar la actividad correcta según el módulo y el estado
+  const renderActivity = () => {
+    if (moduleId === 'colores') {
+      if (showCanvas) {
+        return <CanvasBoard onComplete={handlePhaseComplete} />;
+      }
+      return <ShapeSorter activities={activities} onComplete={handlePhaseComplete} />;
+    }
+    
+    // Default
+    return <FlashcardGame activities={activities} onComplete={handlePhaseComplete} />;
+  };
+
   return (
     <div className={`screen screen--activity bg-gradient-to-b ${currentModule.color} min-h-[100dvh] flex flex-col relative overflow-hidden`}>
-      {/* Fondo decorativo de estrellas */}
       <div className="absolute inset-0 bg-[url('/assets/images/backgrounds/stars-pattern.png')] opacity-10 pointer-events-none" />
 
       <TopBar title={currentModule.title} requireHoldToExit={true} />
@@ -121,19 +134,17 @@ const ModulePage = () => {
 
         {!loading && !error && activities.length > 0 && (
           <div className="flex-1 flex flex-col w-full animate-fade-in h-full pb-10">
-            <div className="mb-4 hidden md:block">
-              <MascotWidget 
-                speech={`¡Vamos a jugar con ${currentModule.title}!`} 
-                size="sm" 
-                position="bottom-left" 
-              />
-            </div>
+            {!showCanvas && (
+              <div className="mb-4 hidden md:block">
+                <MascotWidget 
+                  speech={`¡Vamos a jugar con ${currentModule.title}!`} 
+                  size="sm" 
+                  position="bottom-left" 
+                />
+              </div>
+            )}
             
-            {/* Contenedor del Juego */}
-            <FlashcardGame 
-              activities={activities} 
-              onComplete={handleGameComplete} 
-            />
+            {renderActivity()}
           </div>
         )}
 
@@ -153,5 +164,4 @@ const ModulePage = () => {
     </div>
   );
 };
-
 export default ModulePage;
