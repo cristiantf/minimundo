@@ -195,9 +195,19 @@ const seedDatabase = async () => {
         difficulty: 1,
         content: {
           animals: [
-            { id: 'vaca', emoji: '🐄', soundName: 'vaca' },
-            { id: 'cerdo', emoji: '🐷', soundName: 'cerdo' },
-            { id: 'pato', emoji: '🦆', soundName: 'pato' }
+            { id: 'vaca', emoji: '🐄' },
+            { id: 'cerdo', emoji: '🐷' },
+            { id: 'pato', emoji: '🦆' },
+            { id: 'perro', emoji: '🐶' },
+            { id: 'gato', emoji: '🐱' },
+            { id: 'caballo', emoji: '🐴' },
+            { id: 'mono', emoji: '🐒' },
+            { id: 'delfin', emoji: '🐬' },
+            { id: 'leon', emoji: '🦁' },
+            { id: 'aguila', emoji: '🦅' },
+            { id: 'elefante', emoji: '🐘' },
+            { id: 'jirafa', emoji: '🦒' },
+            { id: 'tigre', emoji: '🐅' }
           ]
         }
       },
@@ -207,9 +217,23 @@ const seedDatabase = async () => {
         type: 'animal_food',
         difficulty: 1,
         content: {
-          animal: { id: 'mono', emoji: '🐒' },
-          correctOption: { id: 'platano', emoji: '🍌' },
-          distractors: [{ id: 'hueso', emoji: '🦴' }, { id: 'pescado', emoji: '🐟' }]
+          questions: [
+            {
+              animal: { id: 'mono', emoji: '🐒' },
+              correctOption: { id: 'platano', emoji: '🍌' },
+              distractors: [{ id: 'hueso', emoji: '🦴' }, { id: 'pescado', emoji: '🐟' }]
+            },
+            {
+              animal: { id: 'perro', emoji: '🐶' },
+              correctOption: { id: 'hueso', emoji: '🦴' },
+              distractors: [{ id: 'zanahoria', emoji: '🥕' }, { id: 'platano', emoji: '🍌' }]
+            },
+            {
+              animal: { id: 'vaca', emoji: '🐄' },
+              correctOption: { id: 'pasto', emoji: '🌿' },
+              distractors: [{ id: 'carne', emoji: '🥩' }, { id: 'hueso', emoji: '🦴' }]
+            }
+          ]
         }
       },
       {
@@ -218,9 +242,23 @@ const seedDatabase = async () => {
         type: 'animal_habitat',
         difficulty: 2,
         content: {
-          habitat: { name: 'Océano', emoji: '🌊' },
-          correctOption: { id: 'delfin', emoji: '🐬' },
-          distractors: [{ id: 'leon', emoji: '🦁' }, { id: 'aguila', emoji: '🦅' }]
+          questions: [
+            {
+              habitat: { name: 'Océano', emoji: '🌊' },
+              correctOption: { id: 'delfin', emoji: '🐬' },
+              distractors: [{ id: 'leon', emoji: '🦁' }, { id: 'aguila', emoji: '🦅' }]
+            },
+            {
+              habitat: { name: 'Granja', emoji: '🏡' },
+              correctOption: { id: 'vaca', emoji: '🐄' },
+              distractors: [{ id: 'elefante', emoji: '🐘' }, { id: 'mono', emoji: '🐒' }]
+            },
+            {
+              habitat: { name: 'Selva', emoji: '🌴' },
+              correctOption: { id: 'mono', emoji: '🐒' },
+              distractors: [{ id: 'pato', emoji: '🦆' }, { id: 'caballo', emoji: '🐴' }]
+            }
+          ]
         }
       },
       {
@@ -229,8 +267,20 @@ const seedDatabase = async () => {
         type: 'animal_sound',
         difficulty: 2,
         content: {
-          soundTarget: { id: 'perro', emoji: '🐶', soundName: 'perro' },
-          distractors: [{ id: 'gato', emoji: '🐱' }, { id: 'caballo', emoji: '🐴' }]
+          questions: [
+            {
+              soundTarget: { id: 'perro', emoji: '🐶' },
+              distractors: [{ id: 'gato', emoji: '🐱' }, { id: 'caballo', emoji: '🐴' }]
+            },
+            {
+              soundTarget: { id: 'vaca', emoji: '🐄' },
+              distractors: [{ id: 'cerdo', emoji: '🐷' }, { id: 'pato', emoji: '🦆' }]
+            },
+            {
+              soundTarget: { id: 'pato', emoji: '🦆' },
+              distractors: [{ id: 'aguila', emoji: '🦅' }, { id: 'leon', emoji: '🦁' }]
+            }
+          ]
         }
       },
       {
@@ -239,8 +289,20 @@ const seedDatabase = async () => {
         type: 'animal_shadow',
         difficulty: 3,
         content: {
-          shadowTarget: { id: 'elefante', emoji: '🐘' },
-          distractors: [{ id: 'jirafa', emoji: '🦒' }, { id: 'tigre', emoji: '🐅' }]
+          questions: [
+            {
+              shadowTarget: { id: 'elefante', emoji: '🐘' },
+              distractors: [{ id: 'jirafa', emoji: '🦒' }, { id: 'tigre', emoji: '🐅' }]
+            },
+            {
+              shadowTarget: { id: 'jirafa', emoji: '🦒' },
+              distractors: [{ id: 'mono', emoji: '🐒' }, { id: 'perro', emoji: '🐶' }]
+            },
+            {
+              shadowTarget: { id: 'leon', emoji: '🦁' },
+              distractors: [{ id: 'vaca', emoji: '🐄' }, { id: 'cerdo', emoji: '🐷' }]
+            }
+          ]
         }
       }
     ]);
