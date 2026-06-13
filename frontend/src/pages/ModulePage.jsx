@@ -7,6 +7,7 @@ import MascotWidget from '../components/common/MascotWidget';
 import FlashcardGame from '../components/game/FlashcardGame';
 import ShapeSorter from '../components/game/ShapeSorter';
 import CanvasBoard from '../components/game/CanvasBoard';
+import MemoryGame from '../components/game/MemoryGame';
 import RewardModal from '../components/common/RewardModal';
 
 const MODULE_INFO = {
@@ -106,6 +107,10 @@ const ModulePage = () => {
         return <CanvasBoard onComplete={handlePhaseComplete} />;
       }
       return <ShapeSorter activities={activities} onComplete={handlePhaseComplete} />;
+    }
+    
+    if (moduleId === 'memoria') {
+      return <MemoryGame activities={activities} onComplete={handlePhaseComplete} />;
     }
     
     // Default

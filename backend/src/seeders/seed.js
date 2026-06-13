@@ -237,8 +237,8 @@ const seedDatabase = async () => {
         difficulty: 1,
         content: {
           cards: [
-            { id: 'gato', name: 'Gato', image: 'gato.png' },
-            { id: 'panda', name: 'Panda', image: 'panda.png' }
+            { id: 'gato', name: 'Gato', emoji: '🐱' },
+            { id: 'perro', name: 'Perro', emoji: '🐶' }
           ],
           pairs: 2
         }
@@ -250,11 +250,26 @@ const seedDatabase = async () => {
         difficulty: 2,
         content: {
           cards: [
-            { id: 'gato', name: 'Gato', image: 'gato.png' },
-            { id: 'panda', name: 'Panda', image: 'panda.png' },
-            { id: 'perro', name: 'Perro', image: 'perro.png' }
+            { id: 'gato', name: 'Gato', emoji: '🐱' },
+            { id: 'perro', name: 'Perro', emoji: '🐶' },
+            { id: 'panda', name: 'Panda', emoji: '🐼' }
           ],
           pairs: 3
+        }
+      },
+      {
+        module_id: modules[4].id,
+        title: 'Memoria Animales - Difícil',
+        type: 'memory',
+        difficulty: 3,
+        content: {
+          cards: [
+            { id: 'gato', name: 'Gato', emoji: '🐱' },
+            { id: 'perro', name: 'Perro', emoji: '🐶' },
+            { id: 'panda', name: 'Panda', emoji: '🐼' },
+            { id: 'mono', name: 'Mono', emoji: '🐵' }
+          ],
+          pairs: 4
         }
       }
     ]);
