@@ -27,7 +27,13 @@ const FlashcardGame = ({ activities, onComplete }) => {
       const emojiMap = { 'Mariposa': '🦋', 'Abeja': '🐝', 'Sol': '☀️', 'Perro': '🐕' };
       correctAnswer = emojiMap[currentActivity.content.word] || '🌟';
     } else if (currentActivity.type === 'number') {
-      const emojiMap = { 1: '🐱', 2: '🐻🐻', 3: '🐟🐟🐟' };
+      const emojiMap = { 
+        1: '🐱', 2: '🐻🐻', 3: '🐟🐟🐟',
+        4: '🍎🍎🍎🍎', 5: '⭐🌟⭐🌟⭐', 
+        6: '🎈🎈🎈🎈🎈🎈', 7: '🚗🚗🚗🚗🚗🚗🚗',
+        8: '🌻🌻🌻🌻🌻🌻🌻🌻', 9: '💖💖💖💖💖💖💖💖💖',
+        10: '☀️☀️☀️☀️☀️☀️☀️☀️☀️☀️'
+      };
       correctAnswer = emojiMap[currentActivity.content.number] || '🔢';
     }
 
@@ -52,7 +58,13 @@ const FlashcardGame = ({ activities, onComplete }) => {
       const emojiMap = { 'Mariposa': '🦋', 'Abeja': '🐝', 'Sol': '☀️', 'Perro': '🐕' };
       isCorrect = option === (emojiMap[currentActivity.content.word] || '🌟');
     } else if (currentActivity.type === 'number') {
-      const emojiMap = { 1: '🐱', 2: '🐻🐻', 3: '🐟🐟🐟' };
+      const emojiMap = { 
+        1: '🐱', 2: '🐻🐻', 3: '🐟🐟🐟',
+        4: '🍎🍎🍎🍎', 5: '⭐🌟⭐🌟⭐', 
+        6: '🎈🎈🎈🎈🎈🎈', 7: '🚗🚗🚗🚗🚗🚗🚗',
+        8: '🌻🌻🌻🌻🌻🌻🌻🌻', 9: '💖💖💖💖💖💖💖💖💖',
+        10: '☀️☀️☀️☀️☀️☀️☀️☀️☀️☀️'
+      };
       isCorrect = option === (emojiMap[currentActivity.content.number] || '🔢');
     }
 

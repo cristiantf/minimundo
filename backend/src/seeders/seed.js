@@ -118,6 +118,69 @@ const seedDatabase = async () => {
         content: { number: 3, word: 'Tres', representation: 'Tres Peces' },
         audio_url: '/sounds/numbers/3.mp3',
         image_url: '/images/numbers/3_peces.png'
+      },
+      {
+        module_id: modules[1].id,
+        title: 'Número 4 - Cuatro Manzanas',
+        type: 'number',
+        difficulty: 2,
+        content: { number: 4, word: 'Cuatro', representation: 'Cuatro Manzanas' },
+        audio_url: '/sounds/numbers/4.mp3',
+        image_url: '/images/numbers/4_manzanas.png'
+      },
+      {
+        module_id: modules[1].id,
+        title: 'Número 5 - Cinco Estrellas',
+        type: 'number',
+        difficulty: 2,
+        content: { number: 5, word: 'Cinco', representation: 'Cinco Estrellas' },
+        audio_url: '/sounds/numbers/5.mp3',
+        image_url: '/images/numbers/5_estrellas.png'
+      },
+      {
+        module_id: modules[1].id,
+        title: 'Número 6 - Seis Globos',
+        type: 'number',
+        difficulty: 2,
+        content: { number: 6, word: 'Seis', representation: 'Seis Globos' },
+        audio_url: '/sounds/numbers/6.mp3',
+        image_url: '/images/numbers/6_globos.png'
+      },
+      {
+        module_id: modules[1].id,
+        title: 'Número 7 - Siete Autos',
+        type: 'number',
+        difficulty: 3,
+        content: { number: 7, word: 'Siete', representation: 'Siete Autos' },
+        audio_url: '/sounds/numbers/7.mp3',
+        image_url: '/images/numbers/7_autos.png'
+      },
+      {
+        module_id: modules[1].id,
+        title: 'Número 8 - Ocho Flores',
+        type: 'number',
+        difficulty: 3,
+        content: { number: 8, word: 'Ocho', representation: 'Ocho Flores' },
+        audio_url: '/sounds/numbers/8.mp3',
+        image_url: '/images/numbers/8_flores.png'
+      },
+      {
+        module_id: modules[1].id,
+        title: 'Número 9 - Nueve Corazones',
+        type: 'number',
+        difficulty: 3,
+        content: { number: 9, word: 'Nueve', representation: 'Nueve Corazones' },
+        audio_url: '/sounds/numbers/9.mp3',
+        image_url: '/images/numbers/9_corazones.png'
+      },
+      {
+        module_id: modules[1].id,
+        title: 'Número 10 - Diez Soles',
+        type: 'number',
+        difficulty: 3,
+        content: { number: 10, word: 'Diez', representation: 'Diez Soles' },
+        audio_url: '/sounds/numbers/10.mp3',
+        image_url: '/images/numbers/10_soles.png'
       }
     ]);
 
