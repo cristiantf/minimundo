@@ -10,7 +10,7 @@ const AnimalGame = ({ activities, onComplete }) => {
   const [selectedOption, setSelectedOption] = useState(null);
   const [listenedAnimals, setListenedAnimals] = useState([]);
   const [currentQuestionData, setCurrentQuestionData] = useState(null);
-  
+
   const { playSound, synthesizeSpeech } = useAudio();
 
   const getAnimalSoundText = (id) => {
@@ -27,7 +27,7 @@ const AnimalGame = ({ activities, onComplete }) => {
       aguila: 'Soy un águila. ¡Iiiik!',
       elefante: 'Soy un elefante. ¡Fruuu!',
       jirafa: 'Soy una jirafa. ¡Ñam ñam!',
-      tigre: 'Soy un tigre. ¡Grrr!'
+      tigre: 'Soy un tigre. ¡Grarr!'
     };
     return sounds[id] || `Este es el ${id}`;
   };
@@ -54,6 +54,9 @@ const AnimalGame = ({ activities, onComplete }) => {
       const questions = currentActivity.content.questions;
       const randomQ = questions[Math.floor(Math.random() * questions.length)];
       setCurrentQuestionData(randomQ);
+    } else if (currentActivity?.content) {
+      // Fallback por si el navegador tiene la BD antigua en caché
+      setCurrentQuestionData(currentActivity.content);
     } else {
       setCurrentQuestionData(null);
     }
@@ -132,10 +135,10 @@ const AnimalGame = ({ activities, onComplete }) => {
     // We should compute options only once per question.
     // To do this inline safely without a new state, we can use useMemo, but since we have a parent component, 
     // we'll just seed the `options` array deterministically or use useMemo.
-    
+
     // We can map them inside useMemo if needed. For now, we'll sort them deterministically by ID.
     const options = [correctOption, ...distractors].sort((a, b) => a.id.localeCompare(b.id));
-    
+
     return (
       <div className="flex flex-col items-center gap-8 w-full">
         <div className="bg-white/80 p-8 rounded-full shadow-lg border-4 border-white">
@@ -178,7 +181,7 @@ const AnimalGame = ({ activities, onComplete }) => {
     if (!currentQuestionData) return null;
     const { shadowTarget, distractors } = currentQuestionData;
     const options = [shadowTarget, ...distractors].sort((a, b) => a.id.localeCompare(b.id));
-    
+
     return (
       <div className="flex flex-col items-center gap-8 w-full">
         <div className="bg-white/80 p-8 rounded-full shadow-lg border-4 border-white overflow-hidden relative w-48 h-48 flex items-center justify-center">
@@ -221,10 +224,10 @@ const AnimalGame = ({ activities, onComplete }) => {
     if (!currentQuestionData) return null;
     const { soundTarget, distractors } = currentQuestionData;
     const options = [soundTarget, ...distractors].sort((a, b) => a.id.localeCompare(b.id));
-    
+
     return (
       <div className="flex flex-col items-center gap-8 w-full">
-        <motion.button 
+        <motion.button
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
           className="bg-yellow-400 p-8 rounded-full shadow-lg border-4 border-white relative w-40 h-40 flex items-center justify-center cursor-pointer"
@@ -234,7 +237,7 @@ const AnimalGame = ({ activities, onComplete }) => {
           }}
         >
           <span className="text-7xl">🔊</span>
-          <motion.div 
+          <motion.div
             animate={{ scale: [1, 1.2, 1] }}
             transition={{ repeat: Infinity, duration: 1.5 }}
             className="absolute -inset-4 border-4 border-yellow-200 rounded-full"
@@ -277,7 +280,7 @@ const AnimalGame = ({ activities, onComplete }) => {
     <div className="flex flex-col w-full h-full max-w-4xl mx-auto items-center">
       {/* Indicador de Progreso */}
       <div className="w-full bg-white/30 rounded-full h-3 mb-6 overflow-hidden shadow-inner">
-        <div 
+        <div
           className="bg-[#2ECC71] h-full transition-all duration-500 ease-out"
           style={{ width: `${((currentIndex + 1) / activities.length) * 100}%` }}
         />
@@ -294,21 +297,32 @@ const AnimalGame = ({ activities, onComplete }) => {
         >
           {currentActivity.type === 'animal_gallery' && renderGalleryMode()}
           {currentActivity.type === 'animal_food' && currentQuestionData && renderSelectionMode(
-            currentQuestionData.animal.emoji, 
-            "¿Qué come este animal?", 
-            currentQuestionData.correctOption, 
+            currentQuestionData.animal.emoji,
+            "¿Qué come este animal?",
+            currentQuestionData.correctOption,
             currentQuestionData.distractors
           )}
           {currentActivity.type === 'animal_habitat' && currentQuestionData && renderSelectionMode(
-            currentQuestionData.habitat.emoji, 
-            `¿Quién vive en el ${currentQuestionData.habitat.name}?`, 
-            currentQuestionData.correctOption, 
+            currentQuestionData.habitat.emoji,
+            `¿Quién vive en el ${currentQuestionData.habitat.name}?`,
+            currentQuestionData.correctOption,
             currentQuestionData.distractors
           )}
           {currentActivity.type === 'animal_shadow' && renderShadowMode()}
           {currentActivity.type === 'animal_sound' && renderSoundMode()}
         </motion.div>
       </AnimatePresence>
+
+      {/* Botón de Salto Temporal */}
+      <div className="mt-8">
+        <KidButton 
+          variant="secondary" 
+          onClick={handleNext}
+          className="text-2xl px-6 py-2 opacity-80"
+        >
+          Saltar Juego ⏭️
+        </KidButton>
+      </div>
     </div>
   );
 };
