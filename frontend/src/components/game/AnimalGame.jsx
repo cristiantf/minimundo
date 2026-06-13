@@ -178,7 +178,7 @@ const AnimalGame = ({ activities, onComplete }) => {
   };
 
   const renderShadowMode = () => {
-    if (!currentQuestionData) return null;
+    if (!currentQuestionData || !currentQuestionData.shadowTarget) return null;
     const { shadowTarget, distractors } = currentQuestionData;
     const options = [shadowTarget, ...distractors].sort((a, b) => a.id.localeCompare(b.id));
 
@@ -221,7 +221,7 @@ const AnimalGame = ({ activities, onComplete }) => {
   };
 
   const renderSoundMode = () => {
-    if (!currentQuestionData) return null;
+    if (!currentQuestionData || !currentQuestionData.soundTarget) return null;
     const { soundTarget, distractors } = currentQuestionData;
     const options = [soundTarget, ...distractors].sort((a, b) => a.id.localeCompare(b.id));
 
@@ -297,16 +297,16 @@ const AnimalGame = ({ activities, onComplete }) => {
         >
           {currentActivity.type === 'animal_gallery' && renderGalleryMode()}
           {currentActivity.type === 'animal_food' && currentQuestionData && renderSelectionMode(
-            currentQuestionData.animal.emoji,
+            currentQuestionData?.animal?.emoji,
             "¿Qué come este animal?",
-            currentQuestionData.correctOption,
-            currentQuestionData.distractors
+            currentQuestionData?.correctOption,
+            currentQuestionData?.distractors
           )}
           {currentActivity.type === 'animal_habitat' && currentQuestionData && renderSelectionMode(
-            currentQuestionData.habitat.emoji,
-            `¿Quién vive en el ${currentQuestionData.habitat.name}?`,
-            currentQuestionData.correctOption,
-            currentQuestionData.distractors
+            currentQuestionData?.habitat?.emoji,
+            `¿Quién vive en el ${currentQuestionData?.habitat?.name || ''}?`,
+            currentQuestionData?.correctOption,
+            currentQuestionData?.distractors
           )}
           {currentActivity.type === 'animal_shadow' && renderShadowMode()}
           {currentActivity.type === 'animal_sound' && renderSoundMode()}
