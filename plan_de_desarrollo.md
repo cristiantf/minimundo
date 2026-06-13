@@ -65,11 +65,11 @@ Sprints de **2 semanas** con: Planificación → Diseño → Desarrollo → Prue
 - [x] Actividades interactivas de tocar y emparejar (Flashcards)
 
 #### Sprint 4 — Módulo de Colores y Formas (Semana 9-10)
-- [ ] Pizarra interactiva con caballete y pincel
-- [ ] Reconocimiento de colores en objetos (frutas, formas)
-- [ ] Formas geométricas (círculo, cuadrado, triángulo, estrella)
-- [ ] Clasificación por color/forma
-- [ ] Mascota como guía interactiva en la pizarra
+- [x] Pizarra interactiva con caballete y dibujo libre (HTML5 Canvas)
+- [x] Reconocimiento de colores en objetos y botones (Juego ShapeSorter)
+- [x] Formas geométricas (círculo, cuadrado)
+- [x] Clasificación interactiva interactuando con la UI
+- [x] Pizarra mágica como premio final tras completar las actividades
 
 ### 🟡 Fase 3: Módulos Complementarios (Semanas 11-14)
 
