@@ -10,6 +10,37 @@ const AnimalGame = ({ activities, onComplete }) => {
   const [selectedOption, setSelectedOption] = useState(null);
   const { playSound, synthesizeSpeech } = useAudio();
 
+  const getAnimalSoundText = (id) => {
+    const sounds = {
+      vaca: 'Soy una vaca. ¡Muuuu!',
+      cerdo: 'Soy un cerdo. ¡Oink oink!',
+      pato: 'Soy un pato. ¡Cuac cuac!',
+      perro: 'Soy un perro. ¡Guau guau!',
+      gato: 'Soy un gato. ¡Miau miau!',
+      caballo: 'Soy un caballo. ¡Hiii hiii!',
+      mono: 'Soy un mono. ¡Uh uh ah ah!',
+      delfin: 'Soy un delfín. ¡Iii iii!',
+      leon: 'Soy un león. ¡Rooaar!',
+      aguila: 'Soy un águila. ¡Iiiik!',
+      elefante: 'Soy un elefante. ¡Fruuu!',
+      jirafa: 'Soy una jirafa. ¡Ñam ñam!',
+      tigre: 'Soy un tigre. ¡Grrr!'
+    };
+    return sounds[id] || `Este es el ${id}`;
+  };
+
+  const getJustAnimalSound = (id) => {
+    const sounds = {
+      vaca: '¡Muuuu!',
+      cerdo: '¡Oink oink!',
+      pato: '¡Cuac cuac!',
+      perro: '¡Guau guau!',
+      gato: '¡Miau miau!',
+      caballo: '¡Hiii hiii!'
+    };
+    return sounds[id] || `Sonido de ${id}`;
+  };
+
   const currentActivity = activities[currentIndex];
 
   useEffect(() => {
@@ -48,7 +79,7 @@ const AnimalGame = ({ activities, onComplete }) => {
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9, rotate: [0, -10, 10, -10, 0] }}
             onClick={() => {
-              if (synthesizeSpeech) synthesizeSpeech(`El ${animal.id} hace muuu`); // Simulación simple temporal
+              if (synthesizeSpeech) synthesizeSpeech(getAnimalSoundText(animal.id));
               if (i === animals.length - 1 && selectedOption === null) {
                  setSelectedOption(true);
                  setTimeout(handleNext, 2000);
@@ -86,8 +117,7 @@ const AnimalGame = ({ activities, onComplete }) => {
               className="w-full max-w-[150px]"
             >
               <KidButton
-                text={opt.emoji}
-                color={selectedOption === opt.id ? (opt.id === correctOption.id ? 'green' : 'red') : 'blue'}
+                variant={selectedOption === opt.id ? (opt.id === correctOption.id ? 'success' : 'accent') : 'primary'}
                 onClick={() => {
                   if (selectedOption) return;
                   setSelectedOption(opt.id);
@@ -97,8 +127,10 @@ const AnimalGame = ({ activities, onComplete }) => {
                     setTimeout(() => setSelectedOption(null), 1000);
                   }
                 }}
-                className="text-6xl h-32"
-              />
+                className="text-6xl h-32 w-full flex items-center justify-center"
+              >
+                {opt.emoji}
+              </KidButton>
             </motion.div>
           ))}
         </div>
@@ -128,8 +160,7 @@ const AnimalGame = ({ activities, onComplete }) => {
               className="w-full max-w-[150px]"
             >
               <KidButton
-                text={opt.emoji}
-                color={selectedOption === opt.id ? (opt.id === shadowTarget.id ? 'green' : 'red') : 'blue'}
+                variant={selectedOption === opt.id ? (opt.id === shadowTarget.id ? 'success' : 'accent') : 'primary'}
                 onClick={() => {
                   if (selectedOption) return;
                   setSelectedOption(opt.id);
@@ -139,8 +170,10 @@ const AnimalGame = ({ activities, onComplete }) => {
                     setTimeout(() => setSelectedOption(null), 1000);
                   }
                 }}
-                className="text-6xl h-32"
-              />
+                className="text-6xl h-32 w-full flex items-center justify-center"
+              >
+                {opt.emoji}
+              </KidButton>
             </motion.div>
           ))}
         </div>
@@ -159,7 +192,7 @@ const AnimalGame = ({ activities, onComplete }) => {
           whileTap={{ scale: 0.9 }}
           className="bg-yellow-400 p-8 rounded-full shadow-lg border-4 border-white relative w-40 h-40 flex items-center justify-center cursor-pointer"
           onClick={() => {
-            if (synthesizeSpeech) synthesizeSpeech(`Sonido de ${soundTarget.id}`);
+            if (synthesizeSpeech) synthesizeSpeech(getJustAnimalSound(soundTarget.id));
             else playSound('tap');
           }}
         >
@@ -182,8 +215,7 @@ const AnimalGame = ({ activities, onComplete }) => {
               className="w-full max-w-[150px]"
             >
               <KidButton
-                text={opt.emoji}
-                color={selectedOption === opt.id ? (opt.id === soundTarget.id ? 'green' : 'red') : 'purple'}
+                variant={selectedOption === opt.id ? (opt.id === soundTarget.id ? 'success' : 'accent') : 'secondary'}
                 onClick={() => {
                   if (selectedOption) return;
                   setSelectedOption(opt.id);
@@ -193,8 +225,10 @@ const AnimalGame = ({ activities, onComplete }) => {
                     setTimeout(() => setSelectedOption(null), 1000);
                   }
                 }}
-                className="text-6xl h-32"
-              />
+                className="text-6xl h-32 w-full flex items-center justify-center"
+              >
+                {opt.emoji}
+              </KidButton>
             </motion.div>
           ))}
         </div>

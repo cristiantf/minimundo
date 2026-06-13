@@ -16,7 +16,7 @@ const Activity = sequelize.define('Activity', {
     allowNull: false
   },
   type: {
-    type: DataTypes.ENUM('letter', 'number', 'color', 'shape', 'memory', 'animal'),
+    type: DataTypes.ENUM('letter', 'number', 'color', 'shape', 'memory', 'animal', 'animal_gallery', 'animal_food', 'animal_habitat', 'animal_sound', 'animal_shadow'),
     allowNull: false
   },
   difficulty: {
