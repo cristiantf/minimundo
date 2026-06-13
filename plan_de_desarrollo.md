@@ -81,9 +81,11 @@ Sprints de **2 semanas** con: Planificación → Diseño → Desarrollo → Prue
 - [x] Retroalimentación positiva ("¡Excelente Trabajo!")
 
 #### Sprint 6 — Animales y Sonidos (Semana 13-14)
-- [ ] Galería interactiva de animales con sonidos
-- [ ] Juego de hábitats y alimentación
-- [ ] Animaciones de animales interactivas
+- [x] Galería interactiva de animales con síntesis de voz (Web Speech API)
+- [x] Juego de alimentación (asociar animal con comida)
+- [x] Juego de hábitats (asociar paisaje con animal)
+- [x] Minijuegos extra: Reconocimiento de sonidos y sombras (5 niveles en total)
+- [x] Animaciones de animales interactivas con `framer-motion`
 
 ### 🟠 Fase 4: Integración y Funcionalidades Avanzadas (Semanas 15-18)
 

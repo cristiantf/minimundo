@@ -9,11 +9,11 @@
 
 | Indicador | Estado |
 |-----------|--------|
-| **Sprint actual** | Sprint 6 — Animales y Sonidos |
+| **Sprint actual** | Sprint 7 — Progreso y Perfil |
 | **Estado general** | 🟡 En Progreso |
 | **Fecha de inicio** | 28/05/2026 |
 | **Fecha estimada de lanzamiento** | Noviembre 2026 (Semana 22) |
-| **Progreso global** | ██████████ **90%** |
+| **Progreso global** | ██████████ **100% Core / Fase 4 Iniciada** |
 
 ---
 
@@ -52,7 +52,13 @@
 | Sprint 2 | Pantalla Principal y Navegación | ✅ Completado | ██████████ 100% |
 | Sprint 3 | Módulo Letras y Números | ✅ Completado | ██████████ 100% |
 | Sprint 5 | Memoria y Asociación | ✅ Completado | ██████████ 100% |
-| Sprint 6 | Animales y Sonidos | ⬜ Pendiente | ░░░░░░░░░░ 0% |
+| Sprint 6 | Animales y Sonidos | ✅ Completado | ██████████ 100% |
+
+**Detalle Sprint 6:**
+- [x] Motor de minijuegos dinámico (`AnimalGame.jsx`)
+- [x] Integración de Web Speech API para voces interactivas
+- [x] Expansión a 5 niveles únicos (Galería, Comida, Hábitat, Sonidos, Sombras)
+- [x] Animaciones reactivas con Framer Motion
 
 **Detalle Sprint 5:**
 - [x] Lógica de cartas interactiva (`MemoryGame.jsx` y `MemoryCard.jsx`)
@@ -88,7 +94,7 @@
 | Sprint 5 | Memoria y Asociación | ⬜ Pendiente | ░░░░░░░░░░ 0% |
 | Sprint 6 | Animales y Sonidos | ⬜ Pendiente | ░░░░░░░░░░ 0% |
 
-### 🟠 Fase 4: Integración (Semanas 15-18) — ⬜ No Iniciada
+### 🟠 Fase 4: Integración (Semanas 15-18) — 🟡 En Progreso
 
 | Sprint | Descripción | Estado | Progreso |
 |--------|-------------|--------|----------|
@@ -191,10 +197,10 @@ Se han diseñado **4 pantallas conceptuales** que demuestran la visión del proy
 
 | Métrica | Valor |
 |---------|-------|
-| Sprints completados | 6 / 10 |
-| Tareas completadas | 36 / ~80 |
-| Pantallas diseñadas | 7 / ~15 |
-| Módulos desarrollados | 4.5 / 6 |
+| Sprints completados | 7 / 10 |
+| Tareas completadas | 41 / ~80 |
+| Pantallas diseñadas | 8 / ~15 |
+| Módulos desarrollados | 5 / 6 |
 | Bugs reportados | 0 |
 | Bugs resueltos | 0 |
 | Cobertura de pruebas | 0% |
