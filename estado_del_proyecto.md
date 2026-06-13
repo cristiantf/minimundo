@@ -1,7 +1,7 @@
 # 📊 Estado del Proyecto — MiniMundo
 
 > **Aplicación Móvil Educativa e Interactiva para Niños de 3 a 5 Años**  
-> Última actualización: 09/06/2026
+> Última actualización: 13/06/2026
 
 ---
 
@@ -13,7 +13,7 @@
 | **Estado general** | 🟡 En Progreso |
 | **Fecha de inicio** | 28/05/2026 |
 | **Fecha estimada de lanzamiento** | Noviembre 2026 (Semana 22) |
-| **Progreso global** | ██████████ **100% Core / Fase 4 Iniciada** |
+| **Progreso global** | ██████████ **100% Fase 3 / Fase 4 Iniciada** |
 
 ---
 
@@ -51,21 +51,7 @@
 |--------|-------------|--------|----------|
 | Sprint 2 | Pantalla Principal y Navegación | ✅ Completado | ██████████ 100% |
 | Sprint 3 | Módulo Letras y Números | ✅ Completado | ██████████ 100% |
-| Sprint 5 | Memoria y Asociación | ✅ Completado | ██████████ 100% |
-| Sprint 6 | Animales y Sonidos | ✅ Completado | ██████████ 100% |
-
-**Detalle Sprint 6:**
-- [x] Motor de minijuegos dinámico (`AnimalGame.jsx`)
-- [x] Integración de Web Speech API para voces interactivas
-- [x] Expansión a 5 niveles únicos (Galería, Comida, Hábitat, Sonidos, Sombras)
-- [x] Animaciones reactivas con Framer Motion
-
-**Detalle Sprint 5:**
-- [x] Lógica de cartas interactiva (`MemoryGame.jsx` y `MemoryCard.jsx`)
-- [x] Animaciones 3D con `framer-motion` (giro de cartas)
-- [x] Dificultad progresiva (Fácil: 4, Medio: 6, Difícil: 8)
-- [x] Identificación por emojis en lugar de assets pesados
-- [x] Feedback de audio para coincidencias o fallos
+| Sprint 4 | Colores y Formas | ✅ Completado | ██████████ 100% |
 
 **Detalle Sprint 4:**
 - [x] Motor de clasificación por Formas y Colores (`ShapeSorter.jsx`)
@@ -87,12 +73,27 @@
 - [x] Mascota interactiva con saludo personalizado (`MascotWidget.jsx`)
 - [x] Sonidos de interacción configurados en `KidButton` y `GameCard`
 
-### 🟡 Fase 3: Módulos Complementarios (Semanas 11-14) — ⬜ No Iniciada
+### 🔵 Fase 3: Módulos Complementarios (Semanas 11-14) — ✅ Completada
 
 | Sprint | Descripción | Estado | Progreso |
 |--------|-------------|--------|----------|
-| Sprint 5 | Memoria y Asociación | ⬜ Pendiente | ░░░░░░░░░░ 0% |
-| Sprint 6 | Animales y Sonidos | ⬜ Pendiente | ░░░░░░░░░░ 0% |
+| Sprint 5 | Memoria y Asociación | ✅ Completado | ██████████ 100% |
+| Sprint 6 | Animales y Sonidos | ✅ Completado | ██████████ 100% |
+
+**Detalle Sprint 5:**
+- [x] Lógica de cartas interactiva (`MemoryGame.jsx` y `MemoryCard.jsx`)
+- [x] Animaciones 3D con `framer-motion` (giro de cartas)
+- [x] Dificultad progresiva (Fácil: 4, Medio: 6, Difícil: 8)
+- [x] Identificación por emojis en lugar de assets pesados
+- [x] Feedback de audio para coincidencias o fallos
+
+**Detalle Sprint 6:**
+- [x] Motor de minijuegos dinámico (`AnimalGame.jsx`)
+- [x] Integración de Web Speech API para voces interactivas
+- [x] Expansión a 5 niveles únicos (Galería, Comida, Hábitat, Sonidos, Sombras)
+- [x] Animaciones reactivas con Framer Motion y tarjetas grandes
+- [x] Soporte anti-caché y botón de salto
+- [x] Aleatorización de preguntas de animales
 
 ### 🟠 Fase 4: Integración (Semanas 15-18) — 🟡 En Progreso
 
@@ -130,9 +131,9 @@
 |---|-----------|-------|-------|
 | 1 | Propuesta formal del proyecto | 28/05/2026 | Documento de propuesta aprobado |
 | 2 | Mockups conceptuales de UI | 28/05/2026 | 4 pantallas diseñadas (menú, colores, letras, memoria) |
-| 3 | Plan de desarrollo | 09/06/2026 | Cronograma con 10 sprints en 5 fases |
-| 4 | Documentación técnica | 09/06/2026 | Arquitectura, modelos, dependencias |
-| 5 | Estado del proyecto | 09/06/2026 | Documento de seguimiento |
+| 3 | Plan de desarrollo | 13/06/2026 | Cronograma con 10 sprints en 5 fases |
+| 4 | Documentación técnica | 13/06/2026 | Arquitectura, modelos, dependencias |
+| 5 | Estado del proyecto | 13/06/2026 | Documento de seguimiento |
 
 ---
 
@@ -197,12 +198,12 @@ Se han diseñado **4 pantallas conceptuales** que demuestran la visión del proy
 
 | Métrica | Valor |
 |---------|-------|
-| Sprints completados | 7 / 10 |
-| Tareas completadas | 41 / ~80 |
+| Sprints completados | 6 / 10 |
+| Tareas completadas | 55 / ~80 |
 | Pantallas diseñadas | 8 / ~15 |
-| Módulos desarrollados | 5 / 6 |
-| Bugs reportados | 0 |
-| Bugs resueltos | 0 |
+| Módulos desarrollados | 6 / 6 |
+| Bugs reportados | 3 |
+| Bugs resueltos | 3 |
 | Cobertura de pruebas | 0% |
 
 ---

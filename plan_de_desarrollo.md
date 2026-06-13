@@ -2,7 +2,7 @@
 
 > **Aplicación Móvil Educativa e Interactiva para Niños de 3 a 5 Años**  
 > Instituto Superior Tecnológico "Alberto Enríquez"  
-> Responsable: Romina Requene Velasco | Fecha: 28/05/2026
+> Responsable: Romina Requene Velasco | Fecha: 13/06/2026
 
 ---
 
@@ -31,13 +31,13 @@ Sprints de **2 semanas** con: Planificación → Diseño → Desarrollo → Prue
 ### 🔵 Fase 1: Planificación y Diseño (Semanas 1-4)
 
 #### Sprint 0 — Configuración Inicial (Semana 1-2)
-- [ ] Configurar repositorio GitHub y proyecto React.js con Vite
-- [ ] Instalar y configurar Capacitor para compilación Android
-- [ ] Configurar backend Node.js/Express con conexión a MySQL
-- [ ] Diseñar y crear esquema de base de datos MySQL
-- [ ] Definir estructura de carpetas del proyecto (frontend + backend)
-- [ ] Configurar entorno de desarrollo (VS Code + Android Studio para Capacitor)
-- [ ] Definir paleta de colores, tipografía y guía de estilos
+- [x] Configurar repositorio GitHub y proyecto React.js con Vite
+- [x] Instalar y configurar Capacitor para compilación Android
+- [x] Configurar backend Node.js/Express con conexión a MySQL
+- [x] Diseñar y crear esquema de base de datos MySQL
+- [x] Definir estructura de carpetas del proyecto (frontend + backend)
+- [x] Configurar entorno de desarrollo (VS Code + Android Studio para Capacitor)
+- [x] Definir paleta de colores, tipografía y guía de estilos
 
 #### Sprint 1 — Diseño UI/UX (Semana 3-4)
 - [x] Crear wireframes de baja fidelidad
@@ -81,11 +81,11 @@ Sprints de **2 semanas** con: Planificación → Diseño → Desarrollo → Prue
 - [x] Retroalimentación positiva ("¡Excelente Trabajo!")
 
 #### Sprint 6 — Animales y Sonidos (Semana 13-14)
-- [x] Galería interactiva de animales con síntesis de voz (Web Speech API)
-- [x] Juego de alimentación (asociar animal con comida)
+- [x] Galería interactiva de animales con síntesis de voz inteligente
+- [x] Juego de alimentación (asociar animal con comida dinámicamente)
 - [x] Juego de hábitats (asociar paisaje con animal)
 - [x] Minijuegos extra: Reconocimiento de sonidos y sombras (5 niveles en total)
-- [x] Animaciones de animales interactivas con `framer-motion`
+- [x] Implementación de interfaz mejorada para manipulación táctil infantil
 
 ### 🟠 Fase 4: Integración y Funcionalidades Avanzadas (Semanas 15-18)
 
